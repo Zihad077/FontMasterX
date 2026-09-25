@@ -1,20 +1,27 @@
 {
-  "name": "FontMasterX",
+  "name": "FontMasterX - Stylish Font Generator",
   "short_name": "FontMasterX",
+  "description": "Free stylish font generator for social media, gaming and design.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#050505",
+  "orientation": "portrait",
+  "background_color": "#030a16",
+  "theme_color": "#030a16",
+  "lang": "en",
+  "categories": ["utilities", "productivity", "design"],
   "icons": [
     {
       "src": "logo.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
