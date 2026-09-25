@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#030a16">
 
     <!-- ✅ SEO: Primary Meta Tags -->
-    <title>FontMasterX - Free Stylish Font Generator & Fancy Text Online</title>
-    <meta name="title" content="FontMasterX - Free Stylish Font Generator & Fancy Text Online">
-    <meta name="description" content="Free stylish font generator. Create fancy text, cool gamer tags, big ASCII art & decorated fonts for Instagram, TikTok, Facebook, and gaming. Copy & paste instantly.">
+    <title>FontMasterX - Free Stylish Font Generator &amp; Fancy Text Online</title>
+    <meta name="title" content="FontMasterX - Free Stylish Font Generator &amp; Fancy Text Online">
+    <meta name="description" content="Free stylish font generator. Create fancy text, cool gamer tags, big ASCII art &amp; decorated fonts for Instagram, TikTok, Facebook, and gaming. Copy &amp; paste instantly.">
     <meta name="keywords" content="stylish font generator, fancy text, cool fonts, gamer tags, instagram fonts, tiktok fonts, ascii art, font changer, copy paste fonts">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Zihad">
@@ -16,12 +16,13 @@
 
     <!-- ✅ Canonical -->
     <link rel="canonical" href="https://fontmasterx.vercel.app/" />
+    <link rel="sitemap" type="application/xml" href="https://fontmasterx.vercel.app/sitemap.xml">
 
     <!-- ✅ Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fontmasterx.vercel.app/">
     <meta property="og:title" content="FontMasterX - Free Stylish Font Generator">
-    <meta property="og:description" content="Create fancy text, cool gamer tags & big ASCII art for social media. 100% free, copy & paste instantly.">
+    <meta property="og:description" content="Create fancy text, cool gamer tags &amp; big ASCII art for social media. 100% free, copy &amp; paste instantly.">
     <meta property="og:image" content="https://fontmasterx.vercel.app/logo.png">
     <meta property="og:site_name" content="FontMasterX">
 
@@ -29,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://fontmasterx.vercel.app/">
     <meta name="twitter:title" content="FontMasterX - Free Stylish Font Generator">
-    <meta name="twitter:description" content="Create fancy text, cool gamer tags & big ASCII art for social media. 100% free.">
+    <meta name="twitter:description" content="Create fancy text, cool gamer tags &amp; big ASCII art for social media. 100% free.">
     <meta name="twitter:image" content="https://fontmasterx.vercel.app/logo.png">
 
     <!-- ✅ PWA -->
@@ -53,13 +54,12 @@
       "applicationCategory": "DesignApplication",
       "operatingSystem": "Web",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "author": { "@type": "Person", "name": "Zihad" }
+      "author": { "@type": "Person", "name": "Zihad" },
+      "image": "https://fontmasterx.vercel.app/logo.png"
     }
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;800&display=swap" rel="stylesheet">
-
-    <!-- ✅ Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -85,7 +85,6 @@
             display: flex; flex-direction: column; overflow-x: hidden; position: relative;
         }
 
-        /* ✅ SEO visually-hidden helper */
         .sr-only {
             position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
             overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -227,6 +226,134 @@
         .grid-card:hover { border-color: var(--glass-highlight); background: rgba(20, 40, 75, 0.6); }
         .grid-text { font-family: 'JetBrains Mono', monospace; font-size: 15px; }
 
+        /* ✅ BLOG STYLES */
+        .blog-post-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .blog-post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0, 85, 255, 0.25);
+            border-color: var(--glass-highlight);
+        }
+        .blog-post-card .post-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .blog-post-card .post-excerpt {
+            font-size: 14px;
+            color: var(--text-sub);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .blog-post-card .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .blog-post-card .read-more {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-detail {
+            animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .blog-detail .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(148, 193, 255, 0.08);
+            border: 1px solid var(--glass-border);
+            color: var(--accent-cyan);
+            padding: 10px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+        .blog-detail .back-btn:hover {
+            background: rgba(0, 212, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        .blog-detail h2 {
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            background: linear-gradient(to bottom, #ffffff 30%, #8badd9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blog-detail .detail-meta {
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .blog-detail .post-body {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+        .blog-detail .post-body h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 24px 0 10px;
+            color: #fff;
+        }
+        .blog-detail .post-body p {
+            margin-bottom: 14px;
+        }
+        .blog-detail .post-body ul, .blog-detail .post-body ol {
+            margin: 10px 0 16px 22px;
+        }
+        .blog-detail .post-body li {
+            margin-bottom: 8px;
+        }
+        .blog-detail .post-body strong {
+            color: #fff;
+        }
+        .blog-detail .post-body .styled-example {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(3, 10, 22, 0.6);
+            padding: 4px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            color: var(--accent-cyan);
+            font-size: 14px;
+        }
+        .blog-detail .post-body .tip-box {
+            background: rgba(0, 85, 255, 0.08);
+            border-left: 3px solid var(--accent-cyan);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 18px 0;
+            font-size: 15px;
+            color: var(--text-sub);
+        }
+
         #toast {
             position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(50px);
             background: rgba(148, 193, 255, 0.95); backdrop-filter: blur(10px); color: #030a16;
@@ -254,7 +381,6 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
         </button>
 
-        <!-- ✅ SEO-friendly H1 -->
         <h1>
             <span aria-hidden="true">FontMasterX</span>
             <span class="sr-only"> - Free Stylish Font Generator &amp; Fancy Text Maker</span>
@@ -270,6 +396,7 @@
             <button class="tab-btn" onclick="switchTab('repeater', this)">Repeater</button>
             <button class="tab-btn" onclick="switchTab('decor', this)">Decor</button>
             <button class="tab-btn" onclick="switchTab('favorites', this)">Saved</button>
+            <button class="tab-btn" onclick="switchTab('blog', this)">📝 Blog</button>
         </div>
     </div>
 
@@ -311,6 +438,11 @@
 
     <div id="decor" class="content"><div class="grid-container" id="outDecor"></div></div>
     <div id="favorites" class="content"><div id="outFav"></div></div>
+
+    <!-- ✅ BLOG SECTION -->
+    <div id="blog" class="content">
+        <div id="outBlog"></div>
+    </div>
 </div>
 
 <div id="toast"><span>⚡</span> Copied!</div>
@@ -474,7 +606,6 @@
         cont.appendChild(frag);
     }
 
-    // ✅ FIXED: No inline onclick, using data attributes + textContent (safe from XSS)
     function createCardElement(txt, title) {
         const div = document.createElement('div');
         div.className = 'card';
@@ -514,7 +645,6 @@
         el('outRep').appendChild(createCardElement(res.trim(), "Repeater Result"));
     }
 
-    // ✅ FIXED: Safe grid card
     function createGridCard(txt) {
         const div = document.createElement('div');
         div.className = 'grid-card';
@@ -601,6 +731,7 @@
         btn.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         if(id === 'favorites') renderFavs();
+        if(id === 'blog') renderBlogList();
     }
 
     function showToast() {
@@ -611,7 +742,540 @@
 
     function vibrate() { if(navigator.vibrate) navigator.vibrate(40); }
 
-    // ✅ EVENT DELEGATION — handles all card actions safely
+    // ============================================================
+    // ✅ BLOG SYSTEM — 7 SEO-Optimized Blog Posts
+    // ============================================================
+
+    const blogPosts = [
+        {
+            id: 'instagram-bio',
+            title: 'How to Use Stylish Fonts in Your Instagram Bio (2026 Guide)',
+            excerpt: 'Want your Instagram profile to stand out? Learn how to use stylish Unicode fonts in your bio, captions, and username — with copy-paste examples and pro tips for maximum engagement.',
+            date: '2026-09-25',
+            tag: 'Instagram',
+            readTime: '5 min read',
+            body: `
+                <p>Your Instagram bio is the first thing people see when they visit your profile. It is your digital handshake — and with over 2 billion monthly active users on Instagram, standing out has never been more important. Using <strong>stylish fonts in your bio</strong> is one of the easiest ways to make your profile memorable and professional.</p>
+
+                <h3>Why Stylish Fonts Matter on Instagram</h3>
+                <p>Instagram only offers a limited set of default fonts for your bio. But with a <strong>stylish font generator</strong> like FontMasterX, you can create dozens of unique text styles that work natively on Instagram. These are not images — they are real Unicode characters that you can copy and paste directly into your bio, captions, and even your username.</p>
+
+                <div class="tip-box">💡 <strong>Pro Tip:</strong> Instagram shows your bio font to everyone, regardless of device. But keep it readable — use stylish fonts for one or two lines, not your entire bio.</div>
+
+                <h3>Step-by-Step: Change Your Instagram Bio Font</h3>
+                <ol>
+                    <li><strong>Open FontMasterX</strong> — Go to the Styler tab and type your text in the input box.</li>
+                    <li><strong>Choose Your Style</strong> — Browse through the generated fonts. Popular choices for Instagram bios include <span class="styled-example">𝒮𝒸𝓇𝒾𝓅𝓉</span>, <span class="styled-example">𝐁𝐨𝐥𝐝</span>, and <span class="styled-example">𝓕𝓪𝓷𝓬𝔂</span> styles.</li>
+                    <li><strong>Copy the Text</strong> — Tap the Copy button next to the font you like.</li>
+                    <li><strong>Paste in Instagram</strong> — Open Instagram → Edit Profile → Bio, and paste your styled text.</li>
+                </ol>
+
+                <h3>Best Font Styles for Instagram (2026 Trends)</h3>
+                <ul>
+                    <li><strong>Cursive Script</strong> — Elegant and personal. Perfect for names and taglines. Example: <span class="styled-example">𝒥𝑜𝒽𝓃 𝒟𝑜𝑒</span></li>
+                    <li><strong>Small Caps</strong> — Clean and editorial. Great for professional bios. Example: <span class="styled-example">ᴊᴏʜɴ ᴅᴏᴇ</span></li>
+                    <li><strong>Bold Sans</strong> — Instagram has no bold button, so this is how you emphasize a line. Example: <span class="styled-example">𝗝𝗼𝗵𝗻 𝗗𝗼𝗲</span></li>
+                    <li><strong>Bubble Text</strong> — Fun and friendly. Great for creative accounts. Example: <span class="styled-example">ⓙⓞⓗⓝ ⓓⓞⓔ</span></li>
+                </ul>
+
+                <h3>Common Mistakes to Avoid</h3>
+                <p><strong>1. Using too many font styles in one bio.</strong> This looks messy and unprofessional. Stick to one or two styles maximum.</p>
+                <p><strong>2. Using fancy fonts for your call-to-action.</strong> The link in your bio should use normal text so people can read it clearly.</p>
+                <p><strong>3. Not testing on mobile.</strong> Always preview your bio on a phone before saving. Some fonts render differently on Android vs. iOS.</p>
+
+                <div class="tip-box">🔥 <strong>Bonus:</strong> You can also use styled fonts in your Instagram captions, stories, and even your username. Just remember — search engines and hashtags need normal text to work properly.</div>
+
+                <h3>Frequently Asked Questions</h3>
+                <p><strong>Q: Will stylish fonts affect my Instagram SEO?</strong><br>A: Instagram search works on plain text. Use stylish fonts for visual flair, but keep your name field (the bold line under your username) in normal text for searchability.</p>
+                <p><strong>Q: Do these fonts work on all devices?</strong><br>A: Most Unicode fonts render on iOS, Android, and desktop browsers. Some older devices may show empty boxes for rare characters. Stick to popular styles like Bold, Script, and Small Caps for maximum compatibility.</p>
+                <p><strong>Q: Can I use stylish fonts in Instagram ads?</strong><br>A: Yes, but keep your ad copy readable. Use stylish fonts only for headlines, not for the main body text or call-to-action.</p>
+            `
+        },
+        {
+            id: 'gamer-tags',
+            title: '15 Cool Gamer Tag Ideas That Will Make You Stand Out in 2026',
+            excerpt: 'Your gamer tag is your identity in the gaming world. Discover 15 unique gamer tag ideas — from leet speak to decorated Unicode names — for Xbox, PlayStation, Steam, and Discord.',
+            date: '2026-09-24',
+            tag: 'Gaming',
+            readTime: '6 min read',
+            body: `
+                <p>In the competitive world of online gaming, your <strong>gamer tag</strong> is more than just a username — it is your reputation, your brand, and your first impression. Whether you are dominating in Call of Duty, climbing the ranks in Valorant, or streaming on Twitch, a unique gamertag can make you memorable.</p>
+
+                <h3>Why Your Gamer Tag Matters</h3>
+                <p>Studies show that players with distinctive gamertags receive more friend requests, more invites to clans, and more engagement on streaming platforms. Your tag is the one piece of identity that follows you across every game and platform.</p>
+
+                <h3>15 Gamer Tag Ideas (Copy &amp; Paste Ready)</h3>
+
+                <h3>🎯 Classic &amp; Powerful</h3>
+                <ol>
+                    <li><span class="styled-example">꧁PHANTOM꧂</span> — Simple, dark, and intimidating.</li>
+                    <li><span class="styled-example">𝐒𝐇𝐀𝐃𝐎𝐖𝐋𝐎𝐑𝐃</span> — Bold serif for a regal feel.</li>
+                    <li><span class="styled-example">༺VORTEX༻</span> — Decorative and powerful.</li>
+                    <li><span class="styled-example">ＮＥＯＮ_ＢＬＡＤＥ</span> — Full-width for a cyberpunk vibe.</li>
+                    <li><span class="styled-example">☠️REAPER☠️</span> — Emoji-decorated for instant impact.</li>
+                </ol>
+
+                <h3>💀 Leet Speak (1337)</h3>
+                <ol start="6">
+                    <li><span class="styled-example">H4CK3R</span> — Classic hacker style.</li>
+                    <li><span class="styled-example">PR0_G4M3R</span> — For the competitive players.</li>
+                    <li><span class="styled-example">V3N0M</span> — Short, deadly, memorable.</li>
+                </ol>
+
+                <h3>⚡ Aesthetic &amp; Decorative</h3>
+                <ol start="9">
+                    <li><span class="styled-example">❀ 𝓛𝓸𝓽𝓾𝓼 ❀</span> — Elegant and unique.</li>
+                    <li><span class="styled-example">★彡 NINJA 彡★</span> — Japanese-inspired decoration.</li>
+                    <li><span class="styled-example">꒰ঌ CYBER ໒꒱</span> — Cute but deadly.</li>
+                    <li><span class="styled-example">𓆩 𝕯𝖗𝖆𝖌𝖔𝖓 𓆪</span> — Ancient and mysterious.</li>
+                </ol>
+
+                <h3>🎮 Platform-Specific Tips</h3>
+                <p><strong>Xbox:</strong> Allows up to 12 characters plus a # suffix. Use decorations sparingly — they count toward the character limit.</p>
+                <p><strong>PlayStation:</strong> No spaces allowed. Use underscores or decorations like <span class="styled-example">•</span> to separate words.</p>
+                <p><strong>Steam:</strong> Most flexible. You can use almost any Unicode character.</p>
+                <p><strong>Discord:</strong> Supports emojis and Unicode. Great for decorated tags.</p>
+
+                <div class="tip-box">💡 <strong>Pro Tip:</strong> Generate 20 unique gamer tags instantly with FontMasterX's Gamer tab. Each tag is randomly generated with leet speak, decorations, and number combinations.</div>
+
+                <h3>How to Create Your Own Gamer Tag</h3>
+                <ol>
+                    <li>Pick a core word — your favorite animal, element, or concept (e.g., Wolf, Storm, Void).</li>
+                    <li>Add an adjective — Dark, Cyber, Silent, Savage.</li>
+                    <li>Decorate it — Use <span class="styled-example">꧁ ꧂</span>, <span class="styled-example">★</span>, or <span class="styled-example">༺ ༻</span>.</li>
+                    <li>Test it — Make sure it fits your platform's character limit.</li>
+                </ol>
+            `
+        },
+        {
+            id: 'unicode-fonts',
+            title: 'What Are Unicode Fonts? The Complete Guide for 2026',
+            excerpt: 'Unicode fonts are not actual fonts — they are special characters that look like styled text. Learn how they work, where to use them, and why they are essential for social media.',
+            date: '2026-09-23',
+            tag: 'Education',
+            readTime: '7 min read',
+            body: `
+                <p>If you have ever used a <strong>stylish font generator</strong>, you have used Unicode fonts. But what exactly are they? And why do they work on every platform — from Instagram to Discord to Microsoft Word?</p>
+
+                <h3>The Technical Truth: They Are Not Fonts</h3>
+                <p>Here is the secret that most people do not know: <strong>Unicode fonts are not actual fonts.</strong> When you type "A" and generate a "𝐀" (Mathematical Bold Capital A), you are not applying a font style. You are replacing the letter with a completely different Unicode character that happens to look bold.</p>
+                <p>The Unicode standard includes thousands of mathematical symbols, decorative letters, and special characters. Font generators simply map your normal text to these alternative characters.</p>
+
+                <h3>Why This Matters</h3>
+                <p>Because these are real characters — not CSS or font files — they work <strong>everywhere</strong>:</p>
+                <ul>
+                    <li>Instagram bios and captions</li>
+                    <li>Twitter/X usernames and tweets</li>
+                    <li>Discord messages and server names</li>
+                    <li>WhatsApp statuses</li>
+                    <li>TikTok captions and bios</li>
+                    <li>YouTube channel names and descriptions</li>
+                    <li>Even in text messages and emails</li>
+                </ul>
+
+                <h3>Popular Unicode Font Categories</h3>
+                <ul>
+                    <li><strong>Mathematical Bold:</strong> 𝐀𝐁𝐂𝐃 — Used for emphasis.</li>
+                    <li><strong>Mathematical Italic:</strong> 𝐴𝐵𝐶𝐷 — Elegant and formal.</li>
+                    <li><strong>Script/Cursive:</strong> 𝒜ℬ𝒞𝒟 — Personal and stylish.</li>
+                    <li><strong>Fraktur/Gothic:</strong> 𝔄𝔅ℭ𝔇 — Dark and historical.</li>
+                    <li><strong>Double-Struck:</strong> 𝔸𝔹ℂ𝔻 — Mathematical and technical.</li>
+                    <li><strong>Circled:</strong> ⒶⒷⒸⒹ — Fun and playful.</li>
+                    <li><strong>Fullwidth:</strong> ＡＢＣＤ — Wide and modern.</li>
+                    <li><strong>Small Caps:</strong> ᴀʙᴄᴅ — Clean and editorial.</li>
+                </ul>
+
+                <div class="tip-box">⚠️ <strong>Important:</strong> While Unicode fonts are great for decoration, they can hurt SEO and accessibility if overused. Search engines may not recognize 𝓕𝓸𝓷𝓽 as the word "Font". Use them for display names and accents — not for headings or body text.</div>
+
+                <h3>Unicode Fonts vs. Web Fonts</h3>
+                <p><strong>Unicode fonts</strong> are character replacements. They work everywhere but are limited in style variety.</p>
+                <p><strong>Web fonts</strong> (like Google Fonts) are actual font files loaded via CSS. They offer unlimited styles but only work on websites you control.</p>
+                <p>For social media, Unicode fonts are the only option. For websites, web fonts are the professional choice.</p>
+
+                <h3>How to Use Unicode Fonts Safely</h3>
+                <ol>
+                    <li><strong>Use them for decoration, not communication.</strong> Keep your important text in plain characters.</li>
+                    <li><strong>Test on multiple devices.</strong> Some rare Unicode characters show as empty boxes (▯) on older phones.</li>
+                    <li><strong>Do not use them for SEO keywords.</strong> Google reads 𝓕𝓸𝓷𝓽 as a series of symbols, not as the word "Font".</li>
+                    <li><strong>Keep accessibility in mind.</strong> Screen readers may struggle with decorated text.</li>
+                </ol>
+
+                <h3>Frequently Asked Questions</h3>
+                <p><strong>Q: Are Unicode fonts safe to use?</strong><br>A: Yes, they are completely safe. They are standard Unicode characters supported by all modern devices.</p>
+                <p><strong>Q: Can I search for Unicode text on Google?</strong><br>A: No. Google treats 𝓕𝓸𝓷𝓽 and "Font" as different strings. Always use plain text for searchable content.</p>
+                <p><strong>Q: Will Unicode fonts work in Instagram hashtags?</strong><br>A: Hashtags with Unicode characters do not work properly. Always use plain text for hashtags.</p>
+            `
+        },
+        {
+            id: 'copy-paste-fonts',
+            title: 'The Ultimate Guide to Copy and Paste Fonts (2026)',
+            excerpt: 'Copy and paste fonts are the easiest way to style text on any platform. Learn where to find them, how to use them, and the best styles for every social media platform.',
+            date: '2026-09-22',
+            tag: 'Guide',
+            readTime: '5 min read',
+            body: `
+                <p>Copy and paste fonts have revolutionized the way we style text online. No more installing font files, no more CSS coding — just type, copy, and paste. Whether you are a social media influencer, a gamer, or someone who just wants a cooler bio, copy-paste fonts are for you.</p>
+
+                <h3>What Are Copy-Paste Fonts?</h3>
+                <p>Copy-paste fonts are Unicode characters that look like styled text. A <strong>font generator tool</strong> converts your normal text into these special characters, which you can then copy and paste anywhere — Instagram, TikTok, Discord, WhatsApp, and even text messages.</p>
+
+                <h3>Best Copy-Paste Font Styles for Each Platform</h3>
+
+                <h3>📱 Instagram</h3>
+                <ul>
+                    <li><strong>Bio:</strong> Cursive script or Small Caps for elegance. Example: <span class="styled-example">𝒜𝑒𝓈𝓉𝒽𝑒𝓉𝒾𝒸</span></li>
+                    <li><strong>Captions:</strong> Bold Sans for emphasis. Example: <span class="styled-example">𝗕𝗼𝗹𝗱 𝗧𝗲𝘅𝘁</span></li>
+                    <li><strong>Username:</strong> Keep it simple. Instagram search works best with normal characters.</li>
+                </ul>
+
+                <h3>🎮 Discord</h3>
+                <ul>
+                    <li><strong>Server Names:</strong> Fullwidth or Small Caps for a clean look. Example: <span class="styled-example">ＳＥＲＶＥＲ</span></li>
+                    <li><strong>Role Names:</strong> Bold or Circled for hierarchy. Example: <span class="styled-example">ⓂⓄⒹ</span></li>
+                    <li><strong>Messages:</strong> Use sparingly — readability matters in chat.</li>
+                </ul>
+
+                <h3>🐦 Twitter / X</h3>
+                <ul>
+                    <li><strong>Display Name:</strong> Script or Fraktur for personality. Example: <span class="styled-example">𝔗𝔴𝔦𝔱𝔱𝔢𝔯</span></li>
+                    <li><strong>Tweets:</strong> Keep body text normal for searchability.</li>
+                </ul>
+
+                <h3>📹 YouTube</h3>
+                <ul>
+                    <li><strong>Channel Name:</strong> Bold Sans for authority. Example: <span class="styled-example">𝗬𝗼𝘂𝗧𝘂𝗯𝗲</span></li>
+                    <li><strong>Video Titles:</strong> Use normal text for SEO, styled text for thumbnails.</li>
+                </ul>
+
+                <div class="tip-box">💡 <strong>Pro Tip:</strong> Different platforms have different character limits. Xbox gamertags allow 12 characters. Instagram bios allow 150 characters. Always check before finalizing your text.</div>
+
+                <h3>How to Copy and Paste Fonts (Step-by-Step)</h3>
+                <ol>
+                    <li><strong>Go to FontMasterX</strong> and open the Styler tab.</li>
+                    <li><strong>Type your text</strong> in the input box.</li>
+                    <li><strong>Browse the generated fonts.</strong> Each card shows a different style.</li>
+                    <li><strong>Tap Copy</strong> on the style you like. The text is now in your clipboard.</li>
+                    <li><strong>Paste anywhere</strong> — Instagram, Discord, WhatsApp, or any app.</li>
+                </ol>
+
+                <h3>Common Problems and Solutions</h3>
+                <p><strong>Problem:</strong> The font shows as empty boxes (▯).<br><strong>Solution:</strong> Your device does not support that Unicode character. Try a more popular style like Bold or Script.</p>
+                <p><strong>Problem:</strong> The font looks different on mobile vs. desktop.<br><strong>Solution:</strong> This is normal. Unicode rendering varies by platform. Test on your target device before publishing.</p>
+                <p><strong>Problem:</strong> The font does not work in hashtags.<br><strong>Solution:</strong> Hashtags require plain text. Use styled fonts for display names only.</p>
+            `
+        },
+        {
+            id: 'tiktok-fonts',
+            title: 'How to Get Aesthetic Fonts for TikTok and Instagram (2026)',
+            excerpt: 'Aesthetic fonts are taking over TikTok and Instagram. Learn how to create the perfect aesthetic text for your bio, captions, and video overlays with copy-paste Unicode fonts.',
+            date: '2026-09-21',
+            tag: 'Social Media',
+            readTime: '4 min read',
+            body: `
+                <p>Scroll through TikTok or Instagram for five minutes and you will see them: <strong>aesthetic fonts</strong>. From soft cursive scripts to minimal small caps, these text styles have become a hallmark of Gen-Z and Millennial social media culture.</p>
+
+                <h3>What Makes a Font "Aesthetic"?</h3>
+                <p>Aesthetic fonts are not a specific style — they are a vibe. Common characteristics include:</p>
+                <ul>
+                    <li><strong>Soft and rounded</strong> — Script, Cursive, Bubble.</li>
+                    <li><strong>Minimal and clean</strong> — Small Caps, Monospace.</li>
+                    <li><strong>Wide and dreamy</strong> — Fullwidth, Vaporwave.</li>
+                    <li><strong>Decorative but subtle</strong> — Light Fraktur, Thin Script.</li>
+                </ul>
+
+                <h3>Top Aesthetic Font Styles for 2026</h3>
+                <ol>
+                    <li><span class="styled-example">𝒮𝑜𝒻𝓉 𝒮𝒸𝓇𝒾𝓅𝓉</span> — For a romantic, personal vibe.</li>
+                    <li><span class="styled-example">ｖａｐｏｒｗａｖｅ</span> — Fullwidth for a retro-futuristic look.</li>
+                    <li><span class="styled-example">ᴀᴇsᴛʜᴇᴛɪᴄ</span> — Small caps for a clean, editorial feel.</li>
+                    <li><span class="styled-example">✦ 𝓓𝓻𝓮𝓪𝓶𝔂 ✦</span> — Decorated script with sparkles.</li>
+                    <li><span class="styled-example">𝙈𝙤𝙣𝙤𝙨𝙥𝙖𝙘𝙚</span> — For a techy, minimalist aesthetic.</li>
+                </ol>
+
+                <h3>How to Use Aesthetic Fonts on TikTok</h3>
+                <p>TikTok does not have a built-in font selector. But you can use copy-paste fonts in:</p>
+                <ul>
+                    <li><strong>Your bio</strong> — Add a styled tagline or your name.</li>
+                    <li><strong>Video captions</strong> — Use styled text for titles and hooks.</li>
+                    <li><strong>Comments</strong> — Stand out in the comment section.</li>
+                    <li><strong>Direct messages</strong> — Make your DMs more personal.</li>
+                </ul>
+
+                <div class="tip-box">📌 <strong>Important:</strong> TikTok's algorithm reads plain text for search. If you use aesthetic fonts in your bio, keep your most important keywords in normal text.</div>
+
+                <h3>How to Use Aesthetic Fonts on Instagram</h3>
+                <ul>
+                    <li><strong>Bio:</strong> One line of script + one line of small caps is the classic combo.</li>
+                    <li><strong>Story text:</strong> Fullwidth or Bubble for a fun, casual look.</li>
+                    <li><strong>Reel captions:</strong> Bold Sans for emphasis on key words.</li>
+                    <li><strong>Highlights:</strong> Small Caps for a clean, organized feel.</li>
+                </ul>
+
+                <h3>Common Aesthetic Font Mistakes</h3>
+                <p><strong>1. Over-decorating.</strong> Too many sparkles, hearts, and stars look cluttered. Pick one decoration style and stick with it.</p>
+                <p><strong>2. Using aesthetic fonts for everything.</strong> Your bio, captions, and comments should not all be styled. Choose one or two places.</p>
+                <p><strong>3. Ignoring readability.</strong> If your followers cannot read your bio, they will not follow you. Script and Cursive are beautiful but can be hard to read at small sizes.</p>
+
+                <div class="tip-box">🎨 <strong>Aesthetic Combo Idea:</strong><br>
+                𝒩𝒶𝓂𝑒 (Script)<br>
+                ᴛᴀɢʟɪɴᴇ ʜᴇʀᴇ (Small Caps)<br>
+                📍 Location<br>
+                🔗 linktr.ee/yourname</div>
+            `
+        },
+        {
+            id: 'seo-font-tools',
+            title: 'SEO for Font Generator Websites: How to Rank Higher in 2026',
+            excerpt: 'Running a font generator website? Learn the SEO strategies that actually work — from keyword research to content clusters to technical optimization. A must-read for web developers.',
+            date: '2026-09-20',
+            tag: 'SEO',
+            readTime: '8 min read',
+            body: `
+                <p>Font generator websites are a unique SEO challenge. You are competing in a crowded niche, your content is mostly interactive (not text-based), and Google sometimes struggles to understand what your tool actually does. But with the right strategy, you can rank higher and drive consistent organic traffic.</p>
+
+                <h3>1. Target the Right Keywords</h3>
+                <p>Do not just target "font generator". That keyword is extremely competitive. Instead, build <strong>content clusters</strong> around long-tail keywords:</p>
+                <ul>
+                    <li>"stylish font generator for Instagram bio"</li>
+                    <li>"copy and paste fancy text"</li>
+                    <li>"gamer tag generator for Xbox"</li>
+                    <li>"aesthetic fonts for TikTok"</li>
+                    <li>"Unicode font converter"</li>
+                </ul>
+                <p>Each of these keywords has lower competition and higher conversion intent. Users searching for "Instagram bio fonts" are ready to use your tool — they are not just browsing.</p>
+
+                <h3>2. Build Content Clusters (The #1 Strategy)</h3>
+                <p>The most successful font generator sites use a <strong>hub-and-spoke content model</strong>:</p>
+                <ul>
+                    <li><strong>Hub:</strong> Your main font generator tool page (targets "font generator").</li>
+                    <li><strong>Spokes:</strong> Blog posts targeting specific use cases (Instagram, Discord, gaming, etc.).</li>
+                    <li><strong>Internal links:</strong> Every blog post links back to your main tool. Your main tool links to relevant blog posts.</li>
+                </ul>
+                <p>This tells Google that your site is an authority on fonts and text styling. One developer used this exact strategy to grow a font generator site to <strong>50,000+ monthly visitors</strong> with 55+ referring domains[reference:0].</p>
+
+                <h3>3. Optimize Your Tool Page</h3>
+                <p>Your tool page needs more than just JavaScript. Add:</p>
+                <ul>
+                    <li><strong>Descriptive H1:</strong> "Free Stylish Font Generator - Copy &amp; Paste Fancy Text"</li>
+                    <li><strong>Intro paragraph:</strong> 100-150 words explaining what the tool does and who it is for.</li>
+                    <li><strong>How-to section:</strong> Step-by-step instructions with screenshots.</li>
+                    <li><strong>FAQ section:</strong> Answer common questions like "Is this font generator free?" and "Will these fonts work on Instagram?"</li>
+                    <li><strong>Schema markup:</strong> Use WebApplication or SoftwareApplication structured data.</li>
+                </ul>
+
+                <h3>4. Technical SEO Checklist</h3>
+                <ul>
+                    <li><strong>Canonical tags:</strong> Prevent duplicate content issues. Especially important if you have multiple font style pages.</li>
+                    <li><strong>Sitemap:</strong> Submit an XML sitemap to Google Search Console. Include all blog posts and tool pages.</li>
+                    <li><strong>Robots.txt:</strong> Make sure Google can crawl your tool page and blog posts. Do not block CSS or JavaScript files.</li>
+                    <li><strong>Page speed:</strong> Font generators are JavaScript-heavy. Minify your code, lazy-load images, and use a CDN. Aim for a Lighthouse score above 90.</li>
+                    <li><strong>Mobile-first:</strong> Over 70% of font generator users are on mobile. Your tool must work perfectly on phones.</li>
+                </ul>
+
+                <div class="tip-box">⚡ <strong>Key Insight:</strong> Google's Core Web Vitals now include Interaction to Next Paint (INP). A laggy font generator will hurt your rankings. Optimize your JavaScript and avoid blocking the main thread.</div>
+
+                <h3>5. Build Backlinks (The Hard Part)</h3>
+                <p>Backlinks are still one of the strongest ranking factors. For a font generator site, focus on:</p>
+                <ul>
+                    <li><strong>Reddit:</strong> Post your tool in relevant subreddits (r/InternetIsBeautiful, r/webdev).</li>
+                    <li><strong>Quora:</strong> Answer questions about Instagram fonts, Discord names, and gaming tags. Link to your tool as a resource.</li>
+                    <li><strong>Product Hunt:</strong> Launch your tool on Product Hunt for a burst of backlinks and traffic.</li>
+                    <li><strong>Guest posts:</strong> Write articles for design, gaming, and social media blogs. Include a link to your font generator.</li>
+                    <li><strong>GitHub:</strong> If your tool is open-source, your README acts as a backlink.</li>
+                </ul>
+
+                <h3>6. Monitor and Iterate</h3>
+                <p>SEO is not a one-time task. Use Google Search Console to:</p>
+                <ul>
+                    <li>Check which keywords are driving impressions and clicks.</li>
+                    <li>Identify pages with low CTR and improve their titles and meta descriptions.</li>
+                    <li>Find indexing errors and fix them immediately.</li>
+                    <li>Track your average position for target keywords over time.</li>
+                </ul>
+
+                <h3>7. Avoid These SEO Mistakes</h3>
+                <p><strong>❌ Using fancy Unicode fonts for SEO content.</strong> Google reads 𝓕𝓸𝓷𝓽 as symbols, not as the word "Font". Always use plain text for headings, body copy, and meta tags.</p>
+                <p><strong>❌ Keyword stuffing.</strong> Do not repeat "font generator" 20 times on one page. Write naturally.</p>
+                <p><strong>❌ Ignoring accessibility.</strong> Screen readers and search engines both need plain text. Use styled fonts for decoration only.</p>
+
+                <div class="tip-box">🚀 <strong>Final Tip:</strong> The best SEO strategy for a font generator site is to <strong>build the best tool in your niche</strong>. Google rewards sites that provide real value. Focus on speed, usability, and unique features — the rankings will follow.</div>
+            `
+        },
+        {
+            id: 'decorative-text',
+            title: '50+ Decorative Text Symbols and Borders for Social Media',
+            excerpt: 'Decorative text symbols can transform a boring bio into a work of art. Discover 50+ borders, dividers, sparkles, and symbols you can copy and paste anywhere.',
+            date: '2026-09-19',
+            tag: 'Design',
+            readTime: '5 min read',
+            body: `
+                <p>Sometimes a single symbol can make all the difference. A decorative border around your name, a small sparkle next to your tagline, or a divider between sections — these tiny details make your social media profiles look polished and professional.</p>
+
+                <h3>Why Decorative Text Symbols Matter</h3>
+                <p>Social media platforms like Instagram, TikTok, and Discord give you very little control over formatting. You cannot add borders, dividers, or decorative elements with a button. But with <strong>Unicode decorative symbols</strong>, you can copy and paste these elements into any text field.</p>
+
+                <h3>50+ Decorative Symbols (Copy &amp; Paste Ready)</h3>
+
+                <h3>✦ Borders &amp; Frames</h3>
+                <ul>
+                    <li><span class="styled-example">꧁ ꧂</span> — Javanese-style decorative brackets.</li>
+                    <li><span class="styled-example">༺ ༻</span> — Tibetan ornamental brackets.</li>
+                    <li><span class="styled-example">『 』</span> — Japanese corner brackets.</li>
+                    <li><span class="styled-example">【 】</span> — Bold Japanese brackets.</li>
+                    <li><span class="styled-example">⟦ ⟧</span> — Mathematical white brackets.</li>
+                    <li><span class="styled-example">⎛ ⎞</span> — Parenthesis decoration.</li>
+                    <li><span class="styled-example">⌜ ⌝</span> — Corner brackets.</li>
+                    <li><span class="styled-example">⸢ ⸥</span> — Half brackets.</li>
+                    <li><span class="styled-example">𓆩 𓆪</span> — Egyptian-style brackets.</li>
+                </ul>
+
+                <h3>★ Stars &amp; Sparkles</h3>
+                <ul>
+                    <li><span class="styled-example">★</span> — Solid star.</li>
+                    <li><span class="styled-example">☆</span> — Hollow star.</li>
+                    <li><span class="styled-example">✦</span> — Four-pointed star.</li>
+                    <li><span class="styled-example">✧</span> — Hollow four-pointed star.</li>
+                    <li><span class="styled-example">✨</span> — Sparkles emoji.</li>
+                    <li><span class="styled-example">𖤐</span> — Star with horns.</li>
+                    <li><span class="styled-example">⭑</span> — Heavy star.</li>
+                </ul>
+
+                <h3>❀ Flowers &amp; Nature</h3>
+                <ul>
+                    <li><span class="styled-example">❀</span> — Flower.</li>
+                    <li><span class="styled-example">✿</span> — Bold flower.</li>
+                    <li><span class="styled-example">❁</span> — Outlined flower.</li>
+                    <li><span class="styled-example">☾</span> — Crescent moon.</li>
+                    <li><span class="styled-example">☽</span> — Waxing moon.</li>
+                    <li><span class="styled-example">꩜</span> — Circular flower.</li>
+                    <li><span class="styled-example">𓍢</span> — Decorative spiral.</li>
+                </ul>
+
+                <h3>⚡ Symbols &amp; Emblems</h3>
+                <ul>
+                    <li><span class="styled-example">⚡</span> — Lightning bolt.</li>
+                    <li><span class="styled-example">🔥</span> — Fire.</li>
+                    <li><span class="styled-example">⚔️</span> — Crossed swords.</li>
+                    <li><span class="styled-example">☠️</span> — Skull and crossbones.</li>
+                    <li><span class="styled-example">♛</span> — Crown.</li>
+                    <li><span class="styled-example">༒</span> — Tibetan symbol.</li>
+                    <li><span class="styled-example">☯</span> — Yin yang.</li>
+                    <li><span class="styled-example">꧅</span> — Javanese ornament.</li>
+                    <li><span class="styled-example">༄</span> — Tibetan wind symbol.</li>
+                </ul>
+
+                <h3>〰 Dividers &amp; Lines</h3>
+                <ul>
+                    <li><span class="styled-example">⁘</span> — Dotted divider.</li>
+                    <li><span class="styled-example">•</span> — Bullet point.</li>
+                    <li><span class="styled-example">·</span> — Middle dot.</li>
+                    <li><span class="styled-example">∙</span> — Bullet operator.</li>
+                    <li><span class="styled-example">⋆</span> — Star operator.</li>
+                </ul>
+
+                <h3>How to Use Decorative Symbols in Your Bio</h3>
+                <p>Here is a complete bio template using decorative symbols:</p>
+                <div class="tip-box">
+                    ꧁༺ YOUR NAME ༻꧂<br>
+                    ✦ Tagline here ✦<br>
+                    ─────────────────<br>
+                    📍 Location<br>
+                    🔗 linktr.ee/yourname<br>
+                    ─────────────────<br>
+                    ⚡ Powered by FontMasterX
+                </div>
+
+                <h3>Where to Find More Symbols</h3>
+                <p>FontMasterX has a built-in <strong>Decor tab</strong> with 38+ symbols ready to copy. Just tap the Decor tab, find your favorite symbol, and tap Copy. It is that simple.</p>
+
+                <div class="tip-box">💡 <strong>Pro Tip:</strong> Do not overload your bio with symbols. One border style, one divider, and one or two accent symbols is enough. Too many decorations look cluttered and unprofessional.</div>
+            `
+        }
+    ];
+
+    let currentBlogPost = null;
+
+    function renderBlogList() {
+        const container = el('outBlog');
+        if (!container) return;
+
+        if (currentBlogPost) {
+            renderBlogDetail(currentBlogPost);
+            return;
+        }
+
+        container.innerHTML = `
+            <div style="text-align:center; margin-bottom:24px;">
+                <h2 style="font-size:24px; font-weight:900; background:linear-gradient(to bottom, #ffffff 30%, #8badd9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:8px;">📝 FontMasterX Blog</h2>
+                <p style="color:var(--text-sub); font-size:14px; line-height:1.6;">Tips, guides, and tutorials for stylish fonts, gamer tags, and social media.</p>
+            </div>
+        `;
+
+        const frag = document.createDocumentFragment();
+        blogPosts.forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'card blog-post-card';
+            card.dataset.postId = post.id;
+            card.innerHTML = `
+                <div class="post-title"></div>
+                <div class="post-excerpt"></div>
+                <div class="post-meta">
+                    <span></span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            `;
+            card.querySelector('.post-title').textContent = post.title;
+            card.querySelector('.post-excerpt').textContent = post.excerpt;
+            card.querySelector('.post-meta span:first-child').textContent = post.tag + ' · ' + post.readTime;
+            frag.appendChild(card);
+        });
+        container.appendChild(frag);
+    }
+
+    function renderBlogDetail(post) {
+        const container = el('outBlog');
+        if (!container) return;
+
+        container.innerHTML = `
+            <div class="blog-detail">
+                <button class="back-btn" id="blogBackBtn">← Back to Blog</button>
+                <h2>${post.title}</h2>
+                <div class="detail-meta">${post.tag} · ${post.readTime} · ${post.date}</div>
+                <div class="post-body">${post.body}</div>
+                <div style="margin-top:30px; text-align:center;">
+                    <button class="gen-btn" id="blogBackBtnBottom" style="max-width:300px;">← Back to Blog</button>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('blogBackBtn').addEventListener('click', () => {
+            currentBlogPost = null;
+            renderBlogList();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.getElementById('blogBackBtnBottom').addEventListener('click', () => {
+            currentBlogPost = null;
+            renderBlogList();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Event delegation for blog cards and back buttons
+    document.addEventListener('click', (e) => {
+        const blogCard = e.target.closest('.blog-post-card');
+        if (blogCard) {
+            const postId = blogCard.dataset.postId;
+            const post = blogPosts.find(p => p.id === postId);
+            if (post) {
+                currentBlogPost = post;
+                renderBlogDetail(post);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            return;
+        }
+    });
+
+    // ✅ EVENT DELEGATION for all card actions
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('[data-action]');
         if (!btn) return;
