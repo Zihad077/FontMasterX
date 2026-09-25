@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 Allow: /logo.png
 Allow: /manifest.json
+Allow: /blog/
+
 Sitemap: https://fontmasterx.vercel.app/sitemap.xml
